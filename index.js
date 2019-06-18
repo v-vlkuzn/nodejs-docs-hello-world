@@ -1,10 +1,5 @@
 const http = require('http');
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({
-    parameterLimit: 100000,
-    limit: '50mb',
-    extended: true
-}));
+
 const server = http.createServer((request, response) => {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!");
